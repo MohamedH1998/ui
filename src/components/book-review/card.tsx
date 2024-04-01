@@ -35,11 +35,11 @@ const Card = ({
   const properties = () => {
     switch (index) {
       case 1:
-        return "top-0 scale-[0.85] z-[0]";
+        return "top-16 scale-[0.85] z-[0]";
       case 2:
-        return "top-16 scale-[0.9] z-[1]";
+        return "top-32 scale-[0.9] z-[1]";
       case 3:
-        return "top-28 scale-[0.95] z-[2]";
+        return "top-48 scale-[0.95] z-[2]";
     }
   };
   const handleClose = (e: any) => {
@@ -54,7 +54,7 @@ const Card = ({
       onClick={() => setActiveCard(index)}
       className={`absolute shadow-md bg-white text-xl text-ms  w-full md:w-2/3  grid grid-cols-2 transition-all ease-in-out md:hover:-translate-y-4 ${properties()} ${
         inter.className
-      } ${isActiveCard && "top-[10%] z-[20]  hover:translate-y-[0] scale-[1]"}`}
+      } ${isActiveCard && "top-[0%] z-[20]  hover:translate-y-[0] scale-[1]"}`}
     >
       <div
         className={`p-6 space-y-8  cols-span-1 ${bg} relative flex flex-col items-center justify-between`}
