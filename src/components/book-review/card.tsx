@@ -54,10 +54,7 @@ const Card = ({
       onClick={() => setActiveCard(index)}
       className={`absolute shadow-md bg-white text-xl text-ms  w-full md:w-2/3  grid grid-cols-2 transition-all ease-in-out md:hover:-translate-y-4 ${properties()} ${
         inter.className
-      } ${
-        isActiveCard &&
-        "top-[0] z-[20]  hover:translate-y-[0] scale-[0.95] md:scale-[1]"
-      }`}
+      } ${isActiveCard && "top-[10%] z-[20]  hover:translate-y-[0] scale-[1]"}`}
     >
       <div
         className={`p-6 space-y-8  cols-span-1 ${bg} relative flex flex-col items-center justify-between`}
@@ -80,7 +77,6 @@ const Card = ({
         </span>
       </div>
       <div className="h-full w-full relative p-6">
-        ``
         <div className="flex flex-col items-start text-base justify-start  md:pt-6 cols-span-1 space-y-10 md:py-4">
           <h1 className="font-light text-lg md:text-4xl">{name}</h1>
           <div className="flex flex-col space-y-1 text-xs md:text-base">

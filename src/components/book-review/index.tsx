@@ -38,7 +38,7 @@ const books = [
 const BookReview = () => {
   const [activeCard, setActiveCard] = useState<number | null>(null);
   return (
-    <div className="w-full max-w-7xl h-3/5 relative flex items-end justify-center">
+    <div className="w-full max-w-7xl h-4/5 relative flex items-center justify-center">
       {books.map((item, i) => (
         <Card
           activeCard={activeCard}
