@@ -52,7 +52,7 @@ const Card = ({
   return (
     <div
       onClick={() => setActiveCard(index)}
-      className={`absolute shadow-md bg-white text-xl text-ms  w-full md:w-2/3  grid grid-cols-2 transition-all ease-in-out hover:-translate-y-4 ${properties()} ${
+      className={`absolute shadow-md bg-white text-xl text-ms  w-full md:w-2/3  grid grid-cols-2 transition-all ease-in-out md:hover:-translate-y-4 ${properties()} ${
         inter.className
       } ${
         isActiveCard &&
@@ -63,7 +63,15 @@ const Card = ({
         className={`p-6 space-y-8  cols-span-1 ${bg} relative flex flex-col items-center justify-between`}
       >
         <h3 className="md:text-2xl w-full text-left">Book</h3>
-        <Image width={200} height={200} src={src} alt={name} className="w-48" />
+        <Image
+          width={200}
+          height={200}
+          src={src}
+          alt={name}
+          className="w-48"
+          placeholder="blur"
+          blurDataURL="#F5F5F5"
+        />
         <span className="text-xs absolute bottom-7 right-2 -rotate-90">
           {index} / 3
         </span>
@@ -72,6 +80,7 @@ const Card = ({
         </span>
       </div>
       <div className="h-full w-full relative p-6">
+        ``
         <div className="flex flex-col items-start text-base justify-start  md:pt-6 cols-span-1 space-y-10 md:py-4">
           <h1 className="font-light text-lg md:text-4xl">{name}</h1>
           <div className="flex flex-col space-y-1 text-xs md:text-base">
