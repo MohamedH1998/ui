@@ -1,8 +1,12 @@
+import ElementNav from "@/components/element-nav";
 import Button from "@/components/tactile-button";
 
 export default function Home() {
+  const githubLink =
+    "https://github.com/MohamedH1998/ui/blob/main/src/components/tactile-button/index.tsx";
   return (
-    <div className="h-screen w-screen flex flex-col justify-center items-center bg-[#F7F7F8]">
+    <div className="w-screen h-screen flex flex-col items-center justify-center">
+      <ElementNav githubLink={githubLink} />
       <Button />
     </div>
   );

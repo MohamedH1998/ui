@@ -51,10 +51,14 @@ const Card = ({
 
   return (
     <div
+      // this is gross i know, i'm sorry
+      style={{
+        transform: `rotateX(${isActiveCard ? "0" : "30"}deg)`,
+      }}
       onClick={() => setActiveCard(index)}
-      className={`absolute shadow-md bg-white text-xl text-ms  w-full md:w-2/3  grid grid-cols-2 transition-all ease-in-out md:hover:-translate-y-4 ${properties()} ${
+      className={`absolute shadow-md bg-white text-xl text-ms  w-full md:w-2/3  grid grid-cols-2 transition-all ease-in-out ${properties()} ${
         inter.className
-      } ${isActiveCard && "top-[0%] z-[20]  hover:translate-y-[0] scale-[1]"}`}
+      } ${isActiveCard && "top-[0%] z-[20] scale-[1]"}`}
     >
       <div
         className={`p-6 space-y-8  cols-span-1 ${bg} relative flex flex-col items-center justify-between`}
